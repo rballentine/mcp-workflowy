@@ -1,0 +1,46 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug MCP Workflowy (Built JS)",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceFolder}/dist/index.js",
+            "args": [
+                "server",
+                "start"
+            ],
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "console": "integratedTerminal",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "sourceMaps": true,
+            "resolveSourceMapLocations": [
+                "${workspaceFolder}/**"
+            ]
+        },
+        {
+            "name": "Debug MCP Workflowy (Direct TS)",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/index.ts",
+            "args": [
+                "server",
+                "start"
+            ],
+            "env": {},
+            "console": "integratedTerminal",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "runtimeExecutable": "npx",
+            "runtimeArgs": [
+                "tsx"
+            ],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
