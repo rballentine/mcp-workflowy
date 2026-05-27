@@ -1,3 +1,15 @@
+> ## ⚠️ Archived — no longer maintained
+>
+> This was a private fork of [`yippiez/mcp-workflowy`](https://github.com/yippiez/mcp-workflowy) (originally `danield137/mcp-workflowy`), used by the [Bireme Capital](https://biremecapital.com) backend as a git dependency. It carried a small Zod-schema patch on `fix/shared-projects-validation` to tolerate a `shared_projects` field that WorkFlowy started returning unannounced, plus a bump of the underlying [`workflowy`](https://github.com/karelklima/workflowy) JS lib to 2.8.1.
+>
+> **Why it's archived.** WorkFlowy now publishes a documented public REST API at [`workflowy.com/api/v1`](https://workflowy.com/api-reference) with proper API-key auth (no more username/password scraping). Bireme migrated to a native C# REST client + an MCP server hosted in-process by [`ModelContextProtocol.AspNetCore`](https://github.com/modelcontextprotocol/csharp-sdk) — see [rballentine/Bireme#74](https://github.com/rballentine/Bireme/pull/74). Nothing in our stack depends on this fork anymore.
+>
+> **If you arrived here from a search:** consider whether the [official WorkFlowy MCP setup](https://workflowy.com/help/mcp-server) (powered by [`rodolfo-terriquez/workflowy-local-mcp`](https://github.com/rodolfo-terriquez/workflowy-local-mcp)) or a direct REST integration fits your needs better than this Node-based MCP layer over the legacy username/password API.
+>
+> The original README follows for historical reference.
+
+---
+
 [![Install with NPX in VS Code](https://img.shields.io/badge/VS_Code-Install_mcp_workflowy_Server-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=Workflowy%20MCP&config=%7B%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22mcp-workflowy%40latest%22%2C%22server%22%2C%22start%22%5D%2C%20%22env%22%3A%20%7B%22WORKFLOWY_USERNAME%22%3A%22%22%2C%20%22WORKFLOWY_PASSWORD%22%3A%20%22%22%7D%7D)
 # Workflowy MCP
 
